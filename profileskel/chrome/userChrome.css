@@ -1,0 +1,121 @@
+@-moz-document url('chrome://browser/content/browser.xhtml') {
+
+/* #nav-bar, #identity-box { visibility: collapse !important; } */
+
+:root {
+    --toolbar-btn-width: calc((var(--toolbar-start-end-padding) * 2) +
+        16px +
+        (var(--toolbarbutton-outer-padding) * 2) +
+        (var(--toolbarbutton-inner-padding) * 2));
+}
+
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#sidebar-box,
+#nav-bar {
+
+    -moz-appearance: none !important;
+
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+
+}
+
+/* Cursed buttons from Firefox */
+.titlebar-button {
+    appearance: none !important;
+    border-radius: 100% !important;
+}
+.titlebar-button > .toolbarbutton-icon {
+    padding: 6px !important;
+    -moz-context-properties: stroke !important;
+    stroke: currentColor !important;
+}
+.titlebar-min {
+    list-style-image: url(chrome://browser/skin/window-controls/minimize.svg) !important;
+}
+.titlebar-max {
+    list-style-image: url(chrome://browser/skin/window-controls/maximize.svg) !important;
+}
+.titlebar-restore {
+    list-style-image: url(chrome://browser/skin/window-controls/restore.svg) !important;
+}
+.titlebar-close {
+    list-style-image: url(chrome://browser/skin/window-controls/close.svg) !important;
+}
+.titlebar-button:hover {
+    background-color: color-mix(in srgb, currentColor 12%, transparent) !important;
+}
+.titlebar-button:hover:active {
+    background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+.titlebar-close:hover {
+    background-color: #d70022 !important;
+    color: white !important;
+}
+.titlebar-close:hover:active {
+    background-color: #ff0039 !important;
+}
+
+
+#back-button,
+#forward-button {
+    display: none !important;
+}
+
+#urlbar[breakout],
+#toolbar-menubar,
+#PersonalToolbar {
+    display: none !important;
+}
+#urlbar-container {
+    max-width: 0px !important;
+    min-width: 0px !important;
+}
+#nav-bar-customization-target {
+    max-width: 4px !important;
+    min-width: 4px !important;
+}
+
+.titlebar-spacer { display: none !important; }
+.titlebar-buttonbox-container { display: -moz-inline-box !important; }
+
+/* move tabs bar over */
+#TabsToolbar {
+    margin-left: var(--toolbar-btn-width) !important;
+}
+
+/* move entire nav bar  */
+#nav-bar {
+    margin: calc((var(--urlbar-min-height) * -1) - 8px) calc(100vw - var(--toolbar-btn-width)) 0 0 !important;
+}
+toolbarbutton {
+    fill: var(--lwt-text-color) !important;
+}
+
+
+
+/* Hide menu items */
+#appMenu-new-private-window-button2,
+#appMenu-bookmarks-button,
+#appMenu-passwords-button,
+#appMenu-more-button2,
+#appmenu-customizetoolbar,
+#appmenu-moreTools-button,
+#appMenu_feedbackPage,
+#appMenu_helpSafeMode,
+#appMenu_troubleShooting {
+    display: none !important;
+}
+
+@supports -moz-bool-pref("browser.privatebrowsing.autostart") {
+    #appMenu-history-button {
+        display: none !important;
+    }
+}
+
+}
