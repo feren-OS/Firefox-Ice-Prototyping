@@ -20,6 +20,7 @@ user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-f
 user_pref("browser.uidensity", 1);
 user_pref("extensions.pocket.enabled", false);
 user_pref("gfx.webrender.all", true);
+user_pref("pdfjs.enabledCache.state", false);
 user_pref("identity.fxaccounts.enabled", false);
 
 user_pref("privacy.clearOnShutdown.history", true);

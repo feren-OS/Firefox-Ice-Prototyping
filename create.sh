@@ -6,8 +6,6 @@
 rm -rf 'testiceprofile'
 cp -Rfa 'profileskel' 'testiceprofile'
 
-sed -i "s^WEBSITEHERE^$1^g" testiceprofile/prefs.js
-sed -i "s^NAMEHERE^$2^g" testiceprofile/prefs.js
 sed -i "s^WEBSITEHERE^$1^g" testiceprofile/user.js
 sed -i "s^NAMEHERE^$2^g" testiceprofile/user.js
 
