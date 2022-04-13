@@ -112,7 +112,7 @@ toolbarbutton {
     display: none !important;
 }
 
-@supports -moz-bool-pref("browser.privatebrowsing.autostart") {
+@supports -moz-bool-pref("privacy.clearOnShutdown.history") {
     #appMenu-history-button {
         display: none !important;
     }

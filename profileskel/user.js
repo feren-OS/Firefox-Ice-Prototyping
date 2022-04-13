@@ -22,4 +22,4 @@ user_pref("extensions.pocket.enabled", false);
 user_pref("gfx.webrender.all", true);
 user_pref("identity.fxaccounts.enabled", false);
 
-user_pref("browser.privatebrowsing.autostart", true);
+user_pref("privacy.clearOnShutdown.history", true);
