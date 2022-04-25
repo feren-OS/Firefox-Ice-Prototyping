@@ -46,7 +46,7 @@ user_pref("browser.startup.homepage_override.mstone", "9999999.0");
 user_pref("browser.startup.upgradeDialog.version", 9999999);
 user_pref("browser.tabs.inTitlebar", 1);
 user_pref("browser.tabs.warnOnClose", false);
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"fxa-toolbar-menu-button\",\"urlbar-container\",\"forward-button\",\"back-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"downloads-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"save-to-pocket-button\",\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"PersonalToolbar\",\"toolbar-menubar\",\"TabsToolbar\"],\"currentVersion\":17,\"newElementCount\":9}");
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"stop-reload-button\",\"fxa-toolbar-menu-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\",\"downloads-button\"],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"]},\"seen\":[\"save-to-pocket-button\",\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"PersonalToolbar\",\"toolbar-menubar\",\"TabsToolbar\"],\"currentVersion\":17,\"newElementCount\":6}");
 user_pref("browser.uidensity", 1);
 user_pref("browser.urlbar.eventTelemetry.enabled", false);
 user_pref("browser.urlbar.suggest.quicksuggest", false);

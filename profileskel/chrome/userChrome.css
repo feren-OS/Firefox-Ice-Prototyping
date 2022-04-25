@@ -1,19 +1,15 @@
 @-moz-document url('chrome://browser/content/browser.xhtml') {
 
-/* #nav-bar, #identity-box { visibility: collapse !important; } */
-
 :root {
     --toolbar-btn-width: calc((var(--toolbar-start-end-padding) * 2) +
-        16px +
-        (var(--toolbarbutton-outer-padding) * 2) +
-        (var(--toolbarbutton-inner-padding) * 2));
+        (16px * 3) +
+        (var(--toolbarbutton-outer-padding) * 2 * 3) +
+        (var(--toolbarbutton-inner-padding) * 2 * 3));
 }
 
 window,
 #main-window,
-#toolbar-menubar,
 #TabsToolbar,
-#PersonalToolbar,
 #sidebar-box,
 #nav-bar {
 
@@ -62,23 +58,39 @@ window,
 }
 
 
-#back-button,
-#forward-button {
-    display: none !important;
-}
 
+#forward-button,
+#nav-bar-overflow-button,
 #urlbar[breakout],
 #toolbar-menubar,
-#PersonalToolbar {
+#PersonalToolbar,
+#customization-palette-container,
+#customization-panel-container,
+#customization-titlebar-visibility-checkbox,
+#customization-toolbar-visibility-button,
+#customization-reset-button,
+#wrapper-back-button,
+#wrapper-stop-reload-button,
+#wrapper-new-tab-button,
+#wrapper-alltabs-button,
+#wrapper-downloads-button {
     display: none !important;
 }
+#customization-content-container,
 #urlbar-container {
     max-width: 0px !important;
     min-width: 0px !important;
 }
 #nav-bar-customization-target {
-    max-width: 4px !important;
-    min-width: 4px !important;
+    max-width: calc((16px * 2) +
+        (var(--toolbarbutton-outer-padding) * 2 * 2) +
+        (var(--toolbarbutton-inner-padding) * 2 * 2) +
+        var(--toolbarbutton-outer-padding) + var(--toolbarbutton-inner-padding)) !important;
+        /* NOTE: Extra padding to make the menu button properly positioned */
+    min-width: calc((16px * 2) +
+        (var(--toolbarbutton-outer-padding) * 2 * 2) +
+        (var(--toolbarbutton-inner-padding) * 2 * 2) +
+        var(--toolbarbutton-inner-padding)) !important;
 }
 
 .titlebar-spacer { display: none !important; }
@@ -91,10 +103,10 @@ window,
 
 /* move entire nav bar  */
 #nav-bar {
-    margin: calc((var(--urlbar-min-height) * -1) - 8px) calc(100vw - var(--toolbar-btn-width)) 0 0 !important;
+    margin: calc((var(--urlbar-min-height) * -1) - 8px) calc(100vw - var(--toolbar-btn-width) + var(--toolbar-start-end-padding)) 0 0 !important;
 }
 toolbarbutton {
-    fill: var(--lwt-text-color) !important;
+    fill: var(--lwt-text-color) !important; /* use titlebar text colour */
 }
 
 
@@ -115,6 +127,21 @@ toolbarbutton {
 @supports -moz-bool-pref("privacy.clearOnShutdown.history") {
     #appMenu-history-button {
         display: none !important;
+    }
+    #back-button,
+    #reload-button,
+    #stop-button {
+        display: none !important;
+    }
+    :root {
+        --toolbar-btn-width: calc((var(--toolbar-start-end-padding) * 2) +
+            16px +
+            (var(--toolbarbutton-outer-padding) * 2) +
+            (var(--toolbarbutton-inner-padding) * 2));
+    }
+    #nav-bar-customization-target {
+        max-width: var(--toolbarbutton-inner-padding) !important;
+        min-width: var(--toolbarbutton-inner-padding) !important;
     }
 }
 
