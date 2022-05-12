@@ -84,7 +84,7 @@ toolbarbutton {
 #appMenu_feedbackPage,
 #appMenu_helpSafeMode,
 #appMenu_troubleShooting,
-#downloadsHistory {
+#downloadsFooterButtons {
     display: none !important;
 }
 
