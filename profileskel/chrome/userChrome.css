@@ -76,13 +76,15 @@ toolbarbutton {
 /* Hide menu items */
 #appMenu-new-private-window-button2,
 #appMenu-bookmarks-button,
+#appMenu-downloads-button,
 #appMenu-passwords-button,
 #appMenu-more-button2,
 #appmenu-customizetoolbar,
 #appmenu-moreTools-button,
 #appMenu_feedbackPage,
 #appMenu_helpSafeMode,
-#appMenu_troubleShooting {
+#appMenu_troubleShooting,
+#downloadsHistory {
     display: none !important;
 }
 
