@@ -198,6 +198,7 @@ toolbarbutton {
         --autocomplete-popup-highlight-color: rgb(21, 20, 26) !important;
         --tabpanel-background-color: rgb(249, 249, 251) !important;
         --lwt-tabs-border-color: rgba(0, 0, 0, 0) !important;
+        --panel-separator-color: hsla(210,4%,10%,.14) !important;
     }
 }
 
@@ -247,6 +248,7 @@ toolbarbutton {
         --autocomplete-popup-highlight-background: rgb(43, 42, 51) !important;
         --tabpanel-background-color: rgb(43, 42, 51) !important;
         --lwt-tabs-border-color: rgba(0, 0, 0, 0) !important !important;
+        --panel-separator-color: rgba(249,249,250,.1) !important;
     }
 }
 
@@ -309,6 +311,23 @@ color: var(--lwt-tab-text, var(--toolbar-color)) !important;
 
 :not(:-moz-lwtheme) toolbar {
     appearance: none !important;
+    color: inherit !important;
+}
+
+:not(:-moz-lwtheme) toolbarbutton:where([checked="true"]) {
+    color: inherit !important;
+}
+
+:not(:-moz-lwtheme) toolbarbutton:where(:hover) {
+    color: inherit !important;
+}
+
+:not(:-moz-lwtheme) toolbarbutton:where(:hover:active:not([disabled="true"])),
+:not(:-moz-lwtheme) toolbarbutton:where([open="true"]) {
+    color: inherit !important;
+}
+
+:not(:-moz-lwtheme) toolbarbutton:where([disabled="true"]) {
     color: inherit !important;
 }
 
